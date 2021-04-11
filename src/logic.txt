@@ -1,0 +1,49 @@
+Components needed:
+
+Minesweeper
+BoardHead
+FlagCount
+Reset Button
+Timer
+Game
+Row
+Grid Item
+
+
+ createBoard = props => {
+        //create open array
+        let board = [];
+        //for loop to create rows
+        for (let i=0; i<props.rows; i++) {
+            board.push([]);
+            //for loop to create columns
+            for(let j=0; j<props.columns; j++) {
+                board[i].push({
+                    //basic properties of each square on board
+                    x: j,
+                    y: i,
+                    count: 0,
+                    isOpen: false,
+                    hasMine: false,
+                    hasFlag: false
+                });
+            }
+        }
+            //after board is created, mines are created
+            for(let i=0; i<props.mines;i++) {
+                //choose a random row between 0 and the number of rows in the game
+                let randomRow = Math.floor(Math.random() * props.rows);
+                //choose a random column between 0 and the number of columns in the game
+                let randomCol = Math.floor(Math.random() * props.colums);
+
+                let  cell = board[randomRow][randomCol];
+
+                if (cell.hasMine) {
+                    
+                    i--;
+                  } else {
+                    cell.hasMine = true;
+                  }
+                }
+                return board;
+              };

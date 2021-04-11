@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*--Document styling--*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(221, 221, 221);
+}
+
+html #root,
+body #root {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+html #root .minesweeper,
+body #root .minesweeper {
+  display: flex;
+  flex-direction: column;
+  height: 592px;
+}
+
+html #root .minesweeper h1,
+body #root .minesweeper h1 {
+  text-align: center;
+  border-left: 1px solid #444;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid rgb(7, 165, 185);
+}
+
+/*--Game styling--*/
+.minesweeper {
+  width: 500px;
+  height: 600px;
+  border: 1px solid black;
+  background-color: rgb(58, 58, 58);
+}
+
+/*--BoardHead styling--*/
+.boardHead {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+}
+
+.gameHeading {
+  color: rgb(7, 165, 185);
+}
+
+.reset,
+.help,
+.flag-count,
+.timer {
+  display: flex;
+  width: 55px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.flag-count,
+.timer {
+  color: rgb(7, 165, 185);
+}
+
+.reset,
+.help {
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(22, 102, 112);
+  color: rgb(255, 255, 255);
+}
+
+button .help {
+  text-decoration: none;
+}
+
+.help:hover,
+.reset:hover {
+  color: rgb(149, 210, 218);
+}
+
+/*.reset {
+   font-size: 25px; 
+}*/
+
+/*--Board styling--*/
+.board {
+  width: 499px;
+  height: 499px;
+  border: 1px solid black;
+  border-bottom: none;
+} 
+
+.board .row {
+  display: flex;
+  height: 50px;
+}
+
+.board .row:last-child {
+  border-bottom: none;
+  height: 50px;
+}
+
+.board .row .cell {
+  display: flex;
+  width: 49px;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.cell.open {
+  background-color: #d4d4d4;
+  font-weight: bold;
+}
+
+.cell.open:hover {
+  background-color: #d4d4d4;
+}
+
+.cell:hover {
+  background-color:rgb(22, 102, 112);
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+/*--Cell Styling--*/
+
+.ion-flag {
+  color: rgb(6, 139, 6);
+}
+
+.ion-android-radio-button-on {
+  color: maroon;
+}
+
+/*--Help Page Styling--*/
+
+.helpInfo {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+}
+
+.helpInfo li {
+  list-style: none;
+}
+
+.helpEnding, 
+.list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.backBtn {
+  width: 55px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(22, 102, 112);
+  color: rgb(255, 255, 255);
+}
