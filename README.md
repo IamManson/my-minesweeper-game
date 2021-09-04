@@ -1,6 +1,8 @@
 # My MineSweeper Game
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Play game - https://km-minesweeper-game.herokuapp.com/
+
 ### Table of Contents
 ---------------------
 1. Description
